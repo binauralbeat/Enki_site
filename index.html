@@ -15,6 +15,10 @@
 
 <body class="grid-container">
     <!-- <img src="/img/enki.gif" alt="" class="mini-logo"> -->
+    <nav class="box-0 sticky">
+<a class="white-font"href="">HOME</a>
+<a class="white-font"href="">PURCHASES</a>
+    </nav>
 
     <div class="test box-1" data-slides='[
 		"/img/1.JPG",
@@ -47,22 +51,22 @@
 
 <div class="filler-1"></div>
 <div class="filler-2"></div>
-        <div class="song">
 
-            <img class="icon" onClick="togglePlay()" src="/img/feather.png" alt="">
+<img class="icon" onClick="togglePlay()" src="/img/feather.png" alt="">
+
                             <audio src="/tunes/you are turquoise.mp3" type="audio/mpeg" data-track-number="1"
                                 onclick="scrollWin(-1000, 0)" class="" id="myAudio" preload="auto" tabindex="0">
-                        </div>
+                            </audio>
 
-                        </audio>
-                        <div class="song-2">
-                            <img class="icon" onClick="togglePlay()" src="" alt="">
 
-                            <audio src="/tunes/we will always miss you_5.mp3" type="audio/mpeg" class=""
-                                id="audio" preload="none" tabindex="0">
+
+                            <img class="icon-2" onClick="togglePlay2()" src="/img/Enki-site-logos.png" alt="">
+
+                            <audio src="/tunes/throw in the towel_4.mp3" type="audio/mpeg" class=""
+                                id="myAudio2" preload="none" tabindex="0">
 
                             </audio>
-                        </div>
+
 
 
     </div>
@@ -73,6 +77,7 @@
         }
 
         var myAudio = document.getElementById("myAudio");
+        var myAudio2 = document.getElementById("myAudio2");
         var isPlaying = false;
 
         function togglePlay() {
@@ -88,6 +93,21 @@
         myAudio.onpause = function () {
             isPlaying = false;
         };
+        function togglePlay2() {
+            if (isPlaying) {
+                myAudio2.pause()
+            } else {
+                myAudio2.play();
+            }
+        };
+        myAudio2.onplaying = function () {
+            isPlaying = true;
+        };
+        myAudio2.onpause = function () {
+            isPlaying = false;
+        };
+
+        /**/
     </script>
 
     <script src="/scripts/photo.js"></script>
